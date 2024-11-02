@@ -17,15 +17,15 @@ datos para el ejercicio en Kibana/Dev Tools:
 
     cd elasticsearch-8.15.3/
 
-# cambiar este settings:
+# iniciar servidor:
+
+    bin/elasticsearch -d -p pid
+
+# cambiar este settings (una sola vez):
     nano  config/elasticsearch.yml
 and replace this setting with false
 
     xpack.security.enabled: false
-
-# iniciar servidor:
-
-    bin/elasticsearch -d -p pid
 
 # terminar:
 
