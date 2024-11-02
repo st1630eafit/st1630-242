@@ -2,7 +2,7 @@
 # Curso ST1630 Sistemas Intensivos en Datos, 2024-2
 # Profesor: Edwin Montoya M. – emontoya@eafit.edu.co
 
-# Laboratorio Apache Kafka en EC2
+# Laboratorio Apache Kafka / flink en EC2
 
 ## alcance:
 
@@ -11,7 +11,7 @@
 ###  ejecución de al menos 2 producers desde cli
 ###  ejecución de al menos 2 consumers desde cli
 ###  ejecutar y entender producers y consumers en python
-### 2. RETO: Crear un agente logstream o clickstream hacia kafka
+### 2. RETO: Crear un agente logstream o clickstream hacia kafka / flink
 
 ## 1. instalar apache kafka en una VM EC2
 
@@ -86,4 +86,4 @@ Detener zookeeper:
 
       $ bin/zookeeper-server-stop.sh  
 
-## 2. RETO: Crear un agente logstream o clickstream hacia kafka
+## 2. RETO: Crear un agente logstream o clickstream hacia kafka con un procesador de flujo muy sencillo en apache flink con salida a pantalla (printout)
