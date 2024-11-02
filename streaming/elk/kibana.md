@@ -33,6 +33,14 @@ https://www.elastic.co/es/webinars/getting-started-kibana
 
     http://<ip-aws>:5601
 
+    para probar desde un navegador en eafit, como los puertos están cerrados, abrir un tunnel SSH hacia la máquina EC2 así:
+
+    (descarga el labsuser.pem)
+
+    $ ssh -i labsuser.pem ubuntu@ip-publica-vm -L 5601:ip-privada-vm:5601
+
+    http://localhost:5601
+
 Le pedirá el "Enrollment token", el cual puede observar en el link "Where do I find this":
 
 EN EL DIRECTORIO DE ELASTICSEARCH, ejecutar:
