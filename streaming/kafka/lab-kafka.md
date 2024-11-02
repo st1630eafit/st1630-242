@@ -11,7 +11,7 @@
 ###  ejecución de al menos 2 producers desde cli
 ###  ejecución de al menos 2 consumers desde cli
 ###  ejecutar y entender producers y consumers en python
-### 2. RETO: Crear un agente logstream o clickstream hacia kafka / flink
+### 2. RETO: Crear un agente logstream o clickstream hacia kafka  y procesado con flink o spark stream
 
 ## 1. instalar apache kafka en una VM EC2
 
@@ -78,6 +78,41 @@ CONSUMERS:
 
         $ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic sample-topic --from-beginning 
 
+## ejecución de programas en python para producir y consumir mensajes con Apache kafka:
+
+### instalar la libreria de kafka en python:
+
+        $ sudo apt install python3-pip
+        $ sudo pip install kafka-python
+
+### ejecutar ejemplo
+
+1. abrir una consola para consumidor1:
+
+        $ cd st1630-242/streaming/kafka
+        $ python3 kafka-consumer-localhost.py
+
+2. abrir una segunda consola para consumidor2:
+
+        $ cd st1630-242/streaming/kafka
+        $ python3 kafka-consumer-localhost.py
+
+3. abrir una tercera consola para productor1:
+
+        $ cd st1630-242/streaming/kafka
+        $ python3 kafka-producer-localhost.py
+
+enviar algunos mensajes de prueba
+
+4. abrir una cuarta consola para productor2:
+
+        $ cd st1630-242/streaming/kafka
+        $ python3 kafka-producer-localhost.py
+
+enviar algunos mensajes de prueba
+
+// listo!!!!
+
 Detener el servidor de Kafka: 
 
         $ bin/kafka-server-stop.sh 
@@ -86,4 +121,4 @@ Detener zookeeper:
 
       $ bin/zookeeper-server-stop.sh  
 
-## 2. RETO: Crear un agente logstream o clickstream hacia kafka con un procesador de flujo muy sencillo en apache flink con salida a pantalla (printout)
+## 2. RETO: Crear un agente logstream o clickstream hacia kafka con un procesador de flujo muy sencillo en apache flink o spark stream con salida a pantalla (printout)
